@@ -1,0 +1,123 @@
+.LoginAndRegisterBG{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#LoginBG{
+    background: linear-gradient(to right, white, green);
+}
+#LoginForm{
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: white;
+    height: 70vh;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 40px black;
+}
+#LoginHeader{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: Verdana;
+}
+.LoginInput{
+    background-color: white;
+    width: 15vw;
+    margin-top: 7vh;
+    font-size: 2vh;
+    text-align: bottom;
+    height: 3vh;
+    border-top: none;
+    border-right: none;
+    outline: none;
+    color: black;
+    border-left: none;
+    border-bottom: 1.5px solid black;
+}
+.LoginInput:focus{
+    border-bottom: 1.5px solid blue;
+}
+#RegisterBG{
+    background: linear-gradient(to left, white, green);
+}
+.LoginLabel{
+    color: grey;
+    font-size: 2.5vh;
+    margin-top: 2vh;
+}
+#LoginButton{
+    background-color: green;
+}
+.LoginButtons{
+    margin-top: 3vh;
+    height: 4vh;
+    width: 15vw;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 2vh;
+    font-weight: 500;
+}
+.LoginButtons:hover{
+    cursor: pointer;
+    transition: 0.3s all;
+    border: 1px solid black;
+}
+#LoginButton:hover{
+    background-color: #22DD22;
+}
+#LoginGoogle{
+    background-color: #4287f5;
+}
+#LoginGoogle:hover{
+    background-color: #7097cf;
+}
+.LoginText{
+    font-size: 2vh;
+    font-weight: 500;
+}
+.LoginRedirect{
+    font-size: 2vh;
+    margin-top: 2vh;
+    color: blue;
+}
+.LoginRedirect:hover{
+    color: #4287f5;
+}
+@media(max-width: 1180px){
+    #LoginForm{
+        width: 70vw;
+    }
+    .LoginInput{
+        width: 50vw;
+        font-size: 2vh;
+    }
+    .LoginButtons{
+        width: 50vw;
+    }
+}
+@media(max-width: 480px){
+    #LoginForm{
+        width: 90vw;
+    }
+    #LoginHeader{
+        font-weight: 500;
+    }
+    .LoginInput{
+        width: 50vw;
+    }
+    .LoginButtons{
+        width: 50vw;
+    }
+}

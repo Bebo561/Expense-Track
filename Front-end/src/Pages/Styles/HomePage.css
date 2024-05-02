@@ -1,0 +1,634 @@
+#GuestHomepageBG{
+    position: absolute;
+    background-color: white;
+    color: black;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    max-height: auto;
+}
+#HomepageBG{
+    position: absolute;
+    background-color: white;
+    color: black;
+    top: 0;
+    left: 0;
+    margin-top: 9vh;
+    display: flex;
+    flex-direction: column;
+    max-height: auto;
+}
+body{
+    overflow-x: hidden;
+}
+#HomepageTopLeft{
+    height: 40vh;
+    width: 50vw;
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-right: 1px solid black;
+    flex-direction: column;
+}
+.TimeSelect{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    z-index: 3;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+    border: none;
+    width: 15vw;
+}
+#HomepageTopRight{
+    height: 40vh;
+    width: 50vw;
+    right: 0;
+    position: absolute;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+.HomepageLabel{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+}
+.HomepageBudgets{
+    font-size: 80px;
+    font-weight: 400;
+    margin: 0;
+    border: none;
+}
+#BudgetInput{
+    font-size: 50px;
+    font-weight: 400;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    width: 15vw;
+    height: 7vh;
+    background-color: white;
+    color: black;
+}
+.HomepageGreenButtons{
+    border-radius: 8px;
+    border: none;
+    background-color: green;
+}
+.HomepageGreenButtons:hover{
+    background-color: #22DD22;
+    cursor: pointer;
+    transition: 0.3s all;
+    border: 1px solid black;
+}
+.HomepageBlueButtons{
+    background-color: #4287f5;
+    border: none;
+    border-radius: 8px;
+}
+#BudgetInput:focus{
+    outline: none;
+}
+#UpdateBudget{
+   margin: 0;
+   height: 4vh;
+   width: 7vw;
+   font-size: 2vh;
+   font-weight: 500;
+   position: absolute;
+   margin-top: 30vh;
+}
+#CancelBudget{
+    margin: 0;
+    height: 4vh;
+    width: 7vw;
+    background-color: red;
+    z-index: 2;
+    font-size: 2vh;
+    font-weight: 500;
+    border: none;
+    position: absolute;
+    border-radius: 8px;
+    margin-top: 30vh;
+    margin-right: 10vw;
+}
+#SaveBudget{
+    margin: 0;
+    height: 4vh;
+    width: 7vw;
+    z-index: 2;
+    font-size: 2vh;
+    font-weight: 500;
+    position: absolute;
+    margin-top: 30vh;
+    margin-left: 10vw;
+}
+#CancelBudget:hover{
+    background-color: #F35555;
+    cursor: pointer;
+    transition: 0.3s all;
+    border: 1px solid black;
+}
+#TimeSlotHolder{
+    position: relative;
+    display: flex;
+    height: 20vh;
+    border-top: 1px solid black;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+}
+#TimeSlotHelper{
+    position: absolute;
+    margin-bottom: 15vh;
+    weight: 500;
+    font-size: 20px;
+}
+#ExpenseInputHolder{
+    background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+    max-height: auto;
+    flex-grow: 1; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+}   
+#HomepageLogin{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6vw;
+    font-weight: 500;
+    height: 7vh;
+    font-size: 15px;
+    margin-right: 2vw;
+    margin-top: 2vh;
+    z-index: 2;
+}
+.HomepageBlueButtons:hover{
+    background-color: #7097cf;
+    cursor: pointer;
+    transition: 0.3s all;
+    border: 1px solid black;
+}
+#ExpensesHeader{
+    font-size: 40px;
+    weight: 700;
+}
+.ExpenseColumn{
+    width: 80vw;
+    margin-top: 2vh;
+    height: 10vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.ExpenseColumn:hover{
+    background-color: #e7e6e7;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+#Overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ExpenseExpanded{
+    height: 70vh;
+    width: 70vw;
+    z-index: 5;
+    background: white;
+    margin-bottom: 20vh;
+    display: flex;
+    padding-left: 20px;
+    flex-direction: column;
+}
+#ExpandedCost{
+    font-size: 50px;
+    font-weight: 600;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+#ExpandedTitle{
+    font-size: 40px;
+    font-weight: 600;
+}
+.ExpandedHeader{
+    font-size: 30px;
+    font-weight: 600;
+}
+#ExpandedExit{
+    position: absolute;
+    margin-left: 66vw;
+    width: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+#ExpandedExit:hover{
+    background-color: red;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    transition: 0.3s all;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#NewExpenseBoard{
+    width: 80vw;
+    margin-top: 2vh;
+    height: 10vh;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    z-idnex: 2;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#NewExpenseButtonHolder{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.NewExpenseInput{
+    height: 5vh;
+    width: 10vw;
+    background-color: white;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    color: black;
+    text-align: bottom;
+    border: none;
+    font-size: 15px;
+    border-bottom: 1px solid black;
+}
+.NewExpenseSelect{
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+    border: none;
+    width: 13vw;
+    padding: 0;
+    margin: 0;
+    margin-right: 2vw;
+    overflowY: scroll;
+}
+.NewExpenseInput:focus{
+    outline: none;
+    border-bottom: 1.5px solid blue;
+}
+#DeleteNewExpense{
+    height: 5vh;
+    widht: 5vw;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#DeleteNewExpense:hover{
+    background-color: #F35555;
+    cursor: pointer;
+    transition: 0.3s all;
+    border: 1px solid black;
+}
+#SaveNewExpense{
+    height: 5vh;
+    width: 5vw;
+    font-size: 20px;
+}
+#CreateNewExpense{
+    width: 5vw;
+    height: 3vh;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#ExpenseColumnCost{
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: 2vw;
+}
+#ExpenseColumnTitle{
+    font-size: 40px;
+    font-weight: 600;
+    margin-left: 5vw;
+}
+#EditExpense{
+    width: 3vw;
+    height: 5vh;
+    display: flex;
+    margin-top: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+#DeleteExpense{
+    height: 5vh;
+    width: 3vw;
+    border: none; 
+    background-color: red;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#DeleteExpense:hover{
+    background-color: #F35555;
+    cursor: pointer;
+    transition: 0.3s all;
+    border: 1px solid black;
+}
+#Capa_1{
+    height: 20px;
+    width: 20px;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.EditDiv{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+}
+.EditButtonHolder{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25vh;
+}
+.EditHeader{
+    font-size: 30px;
+    font-weight: 500;
+}
+.EditInput{
+    width: 15vw;
+    height: 3vh;
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 15px;
+    border-bottom: 1px solid black;
+    margin-left: 2vw;
+}
+.EditInput:focus{
+    border-bottom: 1px solid blue;
+    outline: none;
+}
+.EditSelect{
+    width: 15vw;
+    margin-left: 2vw;
+}
+#SaveEdit{
+    height: 4vh;
+    width: 7vw;
+    font-size: 15px;
+}
+#CancelEdit{
+    height: 4vh;
+    width: 7vw;
+    background-color: red;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+}
+#CancelEdit:hover{
+    background-color: #F35555;
+    cursor: pointer;
+    transition: 0.3s all;
+    border: 1px solid black;
+}
+@media(max-width: 1180px){
+    .HomepageLabel{
+        font-size: 45px;
+    }
+    #HomepageLogin{
+        width: 10vw;
+        height: 5vh;
+        margin-right: 2vh;
+        font-size: 20px;
+    }
+    #UpdateBudget{
+        width: 12vw;
+        height: 5vh;
+    }
+    #SaveBudget{
+        width: 12vw;
+        margin-left: 20vw;
+    }
+    #CancelBudget{
+        width: 12vw;
+        margin-right: 20vw;
+    }
+    #BudgetInput{
+        width: 35vw;
+    }
+    #TimeSlotHelper{
+        font-size: 30px;
+    }
+    .TimeSelect{
+        width: 20vw;
+        border: 1px solid black;
+    }
+    #NewExpenseBoard{
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 35vh;
+    }
+    .NewExpenseSelect{
+        width: 30vw;
+        font-size: 20px;
+        border: 1px solid black;
+    }
+    .NewExpenseInput{
+        width: 30vw;
+        font-size: 20px;
+    }
+    #NewExpenseButtonHolder{
+        width: 30vw;
+    }
+    #SaveNewExpense{
+        width: 10vw;
+    }
+    #DeleteNewExpense{
+        width: 10vw;
+    }
+    .ExpenseColumn{
+        width: 90vw;
+    }
+    #DeleteExpense{
+        width: 7vw;
+    }
+    #EditExpense{
+        width: 7vw;
+    }
+    .EditSelect{
+        width: 30vw;
+    }
+    #CancelEdit{
+        font-size: 18px;
+        width: 10vw;
+    }
+    #SaveEdit{
+        font-size: 18px;
+        width: 10vw;
+    }
+}
+@media(max-width: 480px){
+    .HomepageLabel{
+        font-size: 22px;
+    }
+    #HomepageLogin{
+        width: 20vw;
+        height: 5vh;
+        margin-right: 2vh;
+    }
+    #UpdateBudget{
+        width: 17vw;
+    }
+    #CancelBudget{
+        width: 17vw;
+        margin-right: 30vw;
+    }
+    #SaveBudget{
+        margin-left: 30vw;
+        width: 17vw;
+    }
+    #BudgetInput{
+        width: 40vw;
+    }
+    .TimeSelect{
+        width: 40vw;
+    }
+    .HomepageBudgets{
+        font-size: 35px;
+        font-weight: 500;
+        margin: 0;
+    }
+    #TimeSlotHelper{
+        font-size: 20px;
+    }
+    #NewExpenseBoard{
+        width: 90vw;
+        height: 40vh;
+        flex-direction: column;
+    }
+    #ExpenseInputHolder{
+        height: 90vh;
+    }
+    .NewExpenseInput{
+        width: 40vw;
+        margin-top: 2vh;
+    }
+    .NewExpenseSelect{
+        width: 40vw;
+        margin-top: 2vh;
+        font-size: 1.5vh;
+        border: 1px solid black;
+    }
+    #NewExpenseButtonHolder{
+        width: 50vw;
+    }
+    #CreateNewExpense{
+        height: 5vh;
+        width: 10vw;
+    }
+    .ExpenseColumn{
+        width: 80vw;
+    }
+    #ExpenseColumnCost{
+        font-size: 35px;
+    }
+    #ExpenseColumnTitle{
+        font-size: 30px;
+    }
+    #DeleteExpense{
+        width: 10vw;
+        height: 5vh;
+    }
+    #EditExpense{
+        margin-top: 2vh;
+        height: 5vh;
+        width: 10vw;
+        margin-bottom: 2vh;
+    }
+    #ExpenseExpanded{
+        height: 70vh;
+        width: 90vw;
+    }
+    #ExpandedCost{
+        font-size: 35px;
+    }
+    #ExpandedExit{
+        margin-left: 83vw;
+    }
+    #ExpandedTitle{
+        font-size: 30px;
+    }
+    .ExpandedHeader{
+        font-size: 25px;
+    }
+    .EditSelect{
+        width: 40vw;
+    }
+    .EditHeader{
+        font-size: 25px;
+    }
+    #CancelEdit{
+        width: 15vw;
+    }
+    #SaveEdit{
+        width: 15vw;
+    }
+    #DeleteNewExpense{
+        width: 15vw;
+    }
+    #SaveNewExpense{
+        width: 15vw;
+    }
+}
+@media( max-width: 375px){
+    #TimeSlotHelper{
+        font-size: 15px;
+    }
+    #ExpenseInputHolder{
+        height: 100vh;
+    }
+}

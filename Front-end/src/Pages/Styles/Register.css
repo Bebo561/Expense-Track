@@ -1,0 +1,45 @@
+.RegisterInput{
+    background-color: white;
+    width: 15vw;
+    height: 5vh;
+    border-top: none;
+    border-right: none;
+    outline: none;
+    color: black;
+    border-left: none;
+    border-bottom: 1.5px solid black;
+}
+.RegisterInput::placeholder{
+    bottom: 0;
+    margin-bottom: 1vh;
+}
+.RegisterInput:focus{
+    border-bottom: 1.5px solid blue;
+}
+#RegisterBG{
+    background: linear-gradient(to left, white, green);
+}
+.RegisterLabel{
+    color: grey;
+    font-size: 2.5vh;
+    margin-top: 1vh;
+}
+#LoginRegisterRedirect{
+    font-size: 2vh;
+    margin-top: 2vh;
+    color: blue;
+}
+#LoginRegisterRedirect:hover{
+    color: #4287f5;
+}
+@media(max-width: 1180px){
+    .RegisterInput{
+        width: 50vw;
+        font-size: 2vh;
+    }
+}
+@media(max-width: 480px){
+    .RegisterInput{
+        width: 50vw;
+    }
+}

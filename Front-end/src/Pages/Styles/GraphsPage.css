@@ -1,0 +1,73 @@
+/* Here is the styling for the graphs page */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.GraphsPageWrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.GraphsPage {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  flex-wrap: wrap;
+  background-color: #ddd;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgb(198, 248, 170), rgb(50, 188, 201));
+}
+
+.dataCard {
+  background-color: whitesmoke;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgb(0, 0, 0);;
+  padding: 1em;
+  margin-bottom: 2vh;
+  width: 90%;
+}
+
+.data1 {
+  width: 86%;
+  height: 20rem;
+  padding-top: 170px;
+}
+
+.data2 {
+  width: 40%;
+  height: 20rem;
+}
+
+.data3 {
+  width: 42%;
+  height: 20rem;
+}
+
+.chart-title {
+  text-align: center;
+  margin-bottom: 10px; 
+}
+
+/* Here is the code that will help the graphs look good on mobile devices */
+@media (max-width: 768px) and (max-height: 1080px) {
+  .data1 {
+    width: 90%;
+    height: 20rem;
+    padding-top: 610px;
+  }
+
+  .data2 {
+    width: 90%;
+    height: 20rem;
+  }
+
+  .data3 {
+    width: 90%;
+    height: 20rem;
+  }
+}

@@ -1,0 +1,11 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development
+/.venv/
+
+# Logs and databases
+*.log
+*.sqlite3
